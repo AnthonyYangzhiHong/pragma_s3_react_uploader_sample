@@ -14,7 +14,7 @@ router.post('/image', function(req,res,next){
     }
   }
   */
-
+  console.log("haha");
   if( !req.body.file ){ res.json( generalResponse( null,2 ) ); return; }
   var file = req.body.file;
 
@@ -33,10 +33,10 @@ router.post('/image', function(req,res,next){
   else{ res.json( generalResponse( null,5 ) ); return; }
 
   AWS.config.region = 'eu-west-1';
-  AWS.config.accessKeyId = "<your-accessKeyId>";
-  AWS.config.secretAccessKey = "<your-secretAccessKey>";
+  AWS.config.accessKeyId = "AKIAJQJRLOWI4OT6K4WQ";
+  AWS.config.secretAccessKey = "9Nc6egmhxioEia1z8JE5bDUmRToIO3oAzsYzi20w";
 
-  var bucketName = "<your-bucketName>";
+  var bucketName = "anthonyhong-test-security";
   var s3bucket = new AWS.S3();
 
   var s3_params = {
